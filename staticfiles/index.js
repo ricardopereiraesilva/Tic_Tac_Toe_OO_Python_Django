@@ -2,15 +2,20 @@ let empty_p_image = '/static/images/empty.gif';
 let red_p_image = '/static/images/red.gif';
 let white_p_image = '/static/images/white.gif';
 
-function get_temporaryId() {
-	let jv_local_id = localStorage.getItem("jv_local_id");
+function generateId() {
 	let d = new Date();
 	let aTime = d.getTime();
 	let timeString = aTime.toString(10);
 	let truncatedTimeString = timeString.slice(6, 13);
 	let newTempIdValue  = parseInt(truncatedTimeString);
+  return newTempIdValue;
+}
+
+function get_temporaryId() {
+	let jv_local_id = localStorage.getItem("jv_local_id");
 	if (jv_local_id == null) {	
-		localStorage.setItem("jv_local_id", newTempIdValue);
+    jv_local_id = generateId()
+    localStorage.setItem("jv_local_id", jv_local_id);
 	}
 	return jv_local_id;
 }
