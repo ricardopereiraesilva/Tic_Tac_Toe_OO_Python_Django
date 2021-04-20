@@ -14,7 +14,7 @@ function generateId() {
 function get_temporaryId() {
 	let jv_local_id = localStorage.getItem("jv_local_id");
 	if (jv_local_id == null) {	
-    jv_local_id = generateId()
+    jv_local_id = generateId();
     localStorage.setItem("jv_local_id", jv_local_id);
 	}
 	return jv_local_id;
