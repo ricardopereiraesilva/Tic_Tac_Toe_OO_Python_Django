@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wp!y0=rho(0d4t+wc=1y3tpu%mntl9-_tb$symq#)4ts^%r#)s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://tic-tac-toe-km.herokuapp.com/']
+ALLOWED_HOSTS = ['https://tic-tac-toe-km.herokuapp.com/', 'https://ricardosilva.prof.ufsc.br/pwa/']
 
 
 # Application definition
